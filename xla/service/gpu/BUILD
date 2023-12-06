@@ -416,7 +416,7 @@ cc_library(
 
 cc_library(
     name = "ir_emitter_triton",
-    srcs = if_cuda_is_configured(["ir_emitter_triton.cc"]) ),
+    srcs = if_cuda_is_configured(["ir_emitter_triton.cc"]),
     hdrs = if_gpu_is_configured(["ir_emitter_triton.h"]),
     deps = [
         ":gemm_rewriter_triton",
