@@ -260,9 +260,7 @@ cc_library(
     hdrs = ["ir_emitter_unnested.h"],
     local_defines = if_cuda_is_configured(["GOOGLE_CUDA=1"]) + if_rocm_is_configured([
         "TENSORFLOW_USE_ROCM=1",
-    ]) + if_rocm_hipblaslt([
-        "TF_HIPBLASLT=1",
-    ]),
+    ]) ,
     deps = [
         ":backend_configs_cc",
         ":gemm_thunk",
