@@ -624,7 +624,7 @@ def _create_local_rocm_repository(repository_ctx):
         ],
     ))
 
-    have_hipblaslt = "1" if rocm_libs["hipblaslt"] != None else "0"
+    have_hipblaslt = "0"
 
     # Set up BUILD file for rocm/
     repository_ctx.template(
